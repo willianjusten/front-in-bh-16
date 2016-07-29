@@ -13,20 +13,13 @@ Reveal.initialize({
     ]
 });
 
-
-function heartBeat() {
-    document.getElementById('heart').classList.add('activated');
-    var audio = new Audio('musics/heartbeat.mp3');
-    audio.play();
-}
-
-var winampPlay = false;
-function winamp() {
-    if(!winampPlay) {
-        var audio = new Audio('musics/winamp.mp3');
+var horaShow = false;
+function hora() {
+    if(!horaShow) {
+        var audio = new Audio('musics/hora-do-show.mp3');
         audio.play();
-        winampPlay = true;
+        horaShow = true;
     }
 }
 
-Reveal.addEventListener('winamp', winamp);
+Reveal.addEventListener('hora', hora);
