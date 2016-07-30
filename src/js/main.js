@@ -22,4 +22,14 @@ function hora() {
     }
 }
 
+var naoVai = false;
+function daNao() {
+    if(!naoVai) {
+        var audio = new Audio('musics/que-num-vai-da-pai.mp3');
+        audio.play();
+        naoVai = true;
+    }
+}
+
 Reveal.addEventListener('hora', hora);
+Reveal.addEventListener('nao', daNao);
