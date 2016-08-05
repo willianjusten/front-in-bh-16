@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Make them Move! Playing with Greensock - Front in BH 16</title>
+    <meta name="description" content="Uma apresentação sobre a mais importante biblioteca de animação para web, Greensock.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="img/folder-img.png">
+    <meta property="og:description" content="Uma apresentação sobre a mais importante biblioteca de animação para web, Greensock.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/vendor/reveal.min.js"></script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background="#000"><img src="img/greensock-logo.gif" alt="Greensock" style="margin-right:90px">
+          <h2 class="main-title">Make them Move!</h2>
+          <h4 class="subtitle">Playing with <span class="highlight-item">Greensock</span></h4>
+        </section>
+        <section>
+          <section class="align-left">
+            <div>
+              <p>Às vezes eu escrevo...</p><a href="http://willianjusten.com.br">willianjusten.com.br</a>
+            </div>
+            <div class="fragment">
+              <hr>
+              <p>Às vezes eu faço código open source...</p><a href="http://github.com/willianjusten">github.com/willianjusten</a>
+            </div>
+            <div class="fragment">
+              <hr>
+              <p>E também faço cursos online!</p><a href="http://willianjusten.com.br/cursos">willianjusten.com.br/cursos</a>
+            </div>
+          </section>
+        </section>
+        <section>
+          <h4>Alguns lugares que já trabalhei...</h4><img src="img/jobs.png" alt="Jobs">
+        </section>
+        <section id="hora" data-background-image="img/hora-do-show.jpg" data-state="hora"></section>
+        <section><img src="img/flash-bg.jpg" alt="">
+          <h3>Há muito tempo...</h3>
+        </section>
+        <section><img src="img/old-gsap-logo.jpg" alt="" width="600">
+          <p>Jack Doyle criou o Greensock Flash em 2006</p>
+        </section>
+        <section><img src="img/jobs-flash.jpg" alt="">
+          <p>Steve Jobs ajuda a enterrar o Flash em 2010</p>
+        </section>
+        <section><img src="img/gsap-js.jpg" alt="">
+          <p>Criação do GSAP JS</p>
+        </section>
+        <section>
+          <h3>Por que usar GSAP?</h3><p data-height="302" data-theme-id="11319" data-slug-hash="yhEmn" data-default-tab="result" data-user="GreenSock" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/GreenSock/pen/yhEmn/">GreenSock Home Page Animation</a> by GreenSock (<a href="http://codepen.io/GreenSock">@GreenSock</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <section>
+          <h2>
+            "Legal... 
+            <br/>
+            Mas nunca ouvi <span class="highlight-item">falar</span>"
+          </h2>
+        </section>
+        <section data-background-video="videos/awwwards.mp4" data-background-video-loop="true"></section>
+        <section>
+          <h3>"Isso aí é só <span class="highlight-item">site conceitual</span>"</h3>
+          <p>Programador inventando desculpa</p>
+        </section>
+        <section><img src="img/brands.png" alt=""></section>
+        <section>
+          <h2>Cases de <span class="highlight-item">sucesso</span></h2>
+        </section>
+        <section data-background-video="videos/waaark.mp4" data-background-video-loop="true" class="case-video"><a href="http://waaark.com/" class="link-case">waaark.com</a></section>
+        <section data-background-video="videos/cuberto.mp4" data-background-video-loop="true" class="case-video"><a href="http://cuberto.com/" class="link-case">cuberto.com</a></section>
+        <section data-background-video="videos/jetlag.mp4" data-background-video-loop="true" class="case-video"><a href="http://jetlag.photos" class="link-case">jetlag.photos</a></section>
+        <section>
+          <h3>"Olha esse site que <span class="highlight-item">legal</span>"</h3>
+          <p>Algum designer pedindo</p>
+        </section>
+        <section data-background-image="img/nao-vai.gif" class="bottom">
+          <h3 class="bottom">Não vai dar para fazer não...</h3>
+        </section>
+        <section data-state="nao" data-background-image="img/que-num-vai-dar.jpg" class="bottom"></section>
+        <section data-background-image="img/desolado.gif"></section>
+        <section>
+          <h2>Vamos aprender <span class="highlight-item">Greensock</span></h2>
+        </section>
+        <section>
+          <h3>Partes do GSAP</h3>
+          <ul>
+            <li><a href="http://www.greensock.com/tweenlite">TweenLite (9Kb)</a></li>
+            <li><a href="http://www.greensock.com/tweenmax">TweenMax (34Kb)</a></li>
+            <li><a href="http://www.greensock.com/timelinelite">TimelineLite (4Kb)</a></li>
+            <li><a href="http://www.greensock.com/timelinemax">TimelineMax (6Kb)</a></li>
+            <li><a href="http://greensock.com/plugins/">Plugins: <span class="white">css, bezier, attr...</span></a></li>
+            <li><a href="http://greensock.com/ease-visualizer">Eases: <span class="white">Elastic, Bounce, Rough, Stepped...</span></a></li>
+            <li><a href="http://www.greensock.com/club">Bonus: <span class="white">SplitText, MorphSVG, DrawSVG...</span></a></li>
+          </ul>
+        </section>
+        <section>
+          <p>TweenMax.<span class="highlight-item">to</span>(target, time, { properties })</p><p data-height="352" data-theme-id="11319" data-slug-hash="jAvAGw" data-default-tab="js,result" data-user="willianjusten" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/willianjusten/pen/jAvAGw/">TweenMax.to()</a> by Willian Justen de Vasconcellos (<a href="http://codepen.io/willianjusten">@willianjusten</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <section>
+          <p>TweenMax.<span class="highlight-item">from</span>(target, time, { properties })</p><p data-height="312" data-theme-id="11319" data-slug-hash="vKzKbN" data-default-tab="js,result" data-user="willianjusten" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/willianjusten/pen/vKzKbN/">TweenMax.from()</a> by Willian Justen de Vasconcellos (<a href="http://codepen.io/willianjusten">@willianjusten</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <section>
+          <p>TweenMax.<span class="highlight-item">staggerFrom</span>(target, time, {properties}, stagger)</p><p data-height="300" data-theme-id="11319" data-slug-hash="grdwAW" data-default-tab="result" data-user="willianjusten" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/willianjusten/pen/grdwAW/">TweenMax.staggerFrom() and TweenMax.staggerTo()</a> by Willian Justen de Vasconcellos (<a href="http://codepen.io/willianjusten">@willianjusten</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <section>
+          <p>TweenMax.<span class="highlight-item">staggerFromTo</span>(target, time, {from}, {to}, stagger)</p><p data-height="300" data-theme-id="11319" data-slug-hash="WxgGbd" data-default-tab="js,result" data-user="willianjusten" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/willianjusten/pen/WxgGbd/">TweenMax.staggerFromTo()</a> by Willian Justen de Vasconcellos (<a href="http://codepen.io/willianjusten">@willianjusten</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <section>
+          <h3>Exemplo em interfaces</h3><p data-height="392" data-theme-id="11319" data-slug-hash="gifIe" data-default-tab="result" data-user="GreenSock" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/GreenSock/pen/gifIe/">gifIe</a> by GreenSock (<a href="http://codepen.io/GreenSock">@GreenSock</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+          <p>
+             
+            By <span class="highlight-item">Greensock</span>
+          </p>
+        </section>
+        <section>
+          <p class="highlight-item">cycle: {}</p><p data-height="345" data-theme-id="11319" data-slug-hash="xOapGo" data-default-tab="js,result" data-user="willianjusten" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/willianjusten/pen/xOapGo/">Cycle</a> by Willian Justen de Vasconcellos (<a href="http://codepen.io/willianjusten">@willianjusten</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <section>
+          <h4>Tudo junto!</h4><p data-height="387" data-theme-id="11319" data-slug-hash="zBmxGy" data-default-tab="result" data-user="willianjusten" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/willianjusten/pen/zBmxGy/">SplitText with stagger and cycle</a> by Willian Justen de Vasconcellos (<a href="http://codepen.io/willianjusten">@willianjusten</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <section data-background-image="img/nice.gif"></section>
+        <section>
+          <h1 class="highlight-item">Timeline</h1>
+        </section>
+        <section>
+          <p>var tl = new <span class="highlight-item">TimelineMax()</span></p><p data-height="367" data-theme-id="11319" data-slug-hash="qNraok" data-default-tab="result" data-user="willianjusten" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/willianjusten/pen/qNraok/">TimelineMax()</a> by Willian Justen de Vasconcellos (<a href="http://codepen.io/willianjusten">@willianjusten</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <section>
+          <h4>TimeLineMax Methods</h4>
+          <ul class="text-left">
+            <li class="highlight-item">play()</li>
+            <li class="highlight-item">pause()</li>
+            <li class="highlight-item">reverse()</li>
+            <li class="highlight-item">resume()</li>
+            <li class="highlight-item">restart()</li>
+          </ul>
+        </section>
+        <section>
+          <h3>TimeLineMax Methods()</h3><p data-height="483" data-theme-id="11319" data-slug-hash="wWEzjj" data-default-tab="result" data-user="willianjusten" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/willianjusten/pen/wWEzjj/">TimelineMax methods</a> by Willian Justen de Vasconcellos (<a href="http://codepen.io/willianjusten">@willianjusten</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+        </section>
+        <section>
+          <h4>Veja mais exemplos</h4><p data-height="300" data-theme-id="11319" data-slug-hash="VjWWZO" data-default-tab="result" data-user="chrisgannon" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/chrisgannon/pen/VjWWZO/">I DESIGN WITH CODE ❤</a> by Chris Gannon (<a href="http://codepen.io/chrisgannon">@chrisgannon</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+          <script async src="//assets.codepen.io/assets/embed/ei.js"></script><a href="http://codepen.io/chrisgannon">http://codepen.io/chrisgannon</a>
+        </section>
+        <section>
+          <h3>Links</h3>
+          <ul>
+            <li><a href="https://ihatetomatoes.net/wp-content/uploads/2015/08/GreenSock-Cheatsheet-2.pdf">GreenSock Cheat Sheet</a></li>
+            <li><a href="http://greensock.com/learning/">Greensock Learning</a></li>
+            <li><a href="https://ihatetomatoes.net/product/greensock-101/?ref=5">Curso Greensock - I Hate Tomatoes</a></li>
+            <li><a href="http://codepen.io/GreenSock/">Codepen do Greensock</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Obrigado</h1><a href="https://willianjusten.com.br/front-in-bh-16" class="bigger-link">bit.ly/gsap-bh</a>
+        </section>
+      </div>
+    </div>
+    <script src="js/vendor/head.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/vendor/prettify/prettify.js"></script>
+  </body>
+</html>
