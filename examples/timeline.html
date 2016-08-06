@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timeline</title>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/TimelineMax.min.js"></script>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+      background: #000
+    }
+
+    .banner {
+      margin: 30px auto;
+      width: 600px;
+    }
+
+
+    .bambam {
+      width: 400px;
+      display: inline-block;
+    }
+
+    .whey {
+      width: 150px;
+      display: inline-block;
+      margin-left: -210px;
+      position: relative;
+    }
+
+    .letters {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 50px;
+      margin-left: -100px;
+    }
+
+    .letter {
+      color: #fff;
+      font-size: 3em;
+      position: relative;
+    }
+</style>
+<body>
+  <div class="banner">
+    <img class="bambam" src="img/bambam.png" alt="" />
+    <div class="letters">
+      <span class="letter">B</span>
+      <span class="letter">I</span>
+      <span class="letter">R</span>
+      <span class="letter">R</span>
+      <span class="letter">R</span>
+      <span class="letter">L</span>
+      <span class="letter">L</span>
+      <span class="letter">!</span>
+    </div>
+    <img class="whey" src="img/whey.png" alt="" />
+  </div>
+</body>
+
+<script>
+    TweenMax.from('.bambam', 1, {opacity: 0, scale: 0,ease: Bounce.easeOut});
+    TweenMax.from('.whey', .5, {opacity:0, right: -200, delay: 1});
+    TweenMax.staggerFrom('.letter', .5, {opacity:0, right: 100, ease: Power4.easeOut, delay:1.5}, .1);
+</script>
+</html>

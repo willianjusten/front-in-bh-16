@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To example</title>
+    <script src="js/TweenMax.min.js"></script>
+    <link href='//fonts.googleapis.com/css?family=Signika+Negative:300' rel='stylesheet' type='text/css'>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body, html {
+      font-family: Signika Negative, sans-serif;
+      background: #111;
+      color:#efefef;
+      height:100%;
+    }
+    ul{
+      list-style: none;
+    }
+    .btn {
+      border: none;
+      text-align:center;
+      cursor: pointer;
+      padding: 25px 80px;
+      margin: 25px 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+      outline: none;
+      position: relative;
+      background-color:rgb(38, 38, 38);
+      border: solid 1px transparent;
+      border-radius:10px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .nav {
+      position:relative;
+      width:350px;
+      margin:auto;
+      overflow:hidden;
+      background-color:#1d1d1d;
+      height:90%;
+    }
+
+    .instructions {
+      text-align:center;
+      margin-top:10px;
+      
+    }
+</style>
+<body>
+  <ul class="nav">
+    <li class="btn">new game</li>
+    <li class="btn">options</li>
+    <li class="btn">credits</li>
+  </ul>
+  <div class="instructions">
+    click the buttons to animate out
+  </div>
+</body>
+
+<script>
+    TweenMax.staggerFrom(".btn", 2, {scale:0.5, opacity:0, delay:0.5, ease:Elastic.easeOut, force3D:true}, 0.2);
+  
+    var btn = document.querySelector('.btn');
+    btn.addEventListener('click', function(){
+      TweenMax.staggerTo(".btn", 0.5, {opacity:0, y:-100, ease:Back.easeIn}, 0.1);
+    });
+
+</script>
+</html>

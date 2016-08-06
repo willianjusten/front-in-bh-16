@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Timeline Methods</title>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/TimelineMax.min.js"></script>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+      background: #000
+    }
+
+    .banner {
+      margin: 30px auto;
+      width: 700px;
+    }
+
+    input {
+      width: 600px;
+    }
+
+    .bambam {
+      width: 400px;
+      display: inline-block;
+    }
+
+    .whey {
+      width: 150px;
+      display: inline-block;
+      margin-left: -210px;
+      position: relative;
+    }
+
+    .letters {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 50px;
+      margin-left: -100px;
+    }
+
+    .letter {
+      color: #fff;
+      font-size: 3em;
+      position: relative;
+    }
+
+    button {
+      font-size: 1.5em;
+      padding: 5px 15px;
+      margin: 10px;
+    }
+</style>
+<body>
+  
+  <div class="banner">
+    <img class="bambam" src="img/bambam.png" alt="" />
+    <div class="letters">
+      <span class="letter">B</span>
+      <span class="letter">I</span>
+      <span class="letter">R</span>
+      <span class="letter">R</span>
+      <span class="letter">R</span>
+      <span class="letter">L</span>
+      <span class="letter">L</span>
+      <span class="letter">!</span>
+    </div>
+    <img class="whey" src="img/whey.png" alt="" />
+    <input id="progressSlider" type="range" min="0" max="1" value="0" step="0.001" />
+
+    <div class="buttons">
+      <button id="play">play</button>
+      <button id="pause">pause</button>
+      <button id="reverse">reverse</button>
+      <button id="resume">resume</button>
+      <button id="restart">restart</button>
+    </div>
+  </div>
+
+</body>
+
+<script>
+    var tl = new TimelineMax({ onUpdate:adjustUI });
+    var progressSlider = document.getElementById('progressSlider');
+
+    tl.from('.bambam', 1, {opacity: 0, scale: 0,ease: Bounce.easeOut})
+      .from('.whey', .5, {opacity:0, right: -200})
+      .staggerFrom('.letter', .5, {opacity:0, right: 100, ease: Power4.easeOut}, .1);
+
+
+    document.getElementById('play').addEventListener('click', function(){
+      tl.play();
+    });
+
+    document.getElementById('pause').addEventListener('click', function(){
+      tl.pause();
+    });
+
+    document.getElementById('reverse').addEventListener('click', function(){
+      tl.reverse();
+    });
+
+    document.getElementById('resume').addEventListener('click', function(){
+      tl.resume();
+    });
+
+    document.getElementById('restart').addEventListener('click', function(){
+      tl.restart();
+    });
+
+    function update(){
+      tl.progress(progressSlider.value).pause();
+    }
+
+    function adjustUI() {
+      progressSlider.value = tl.progress();
+    }
+
+    progressSlider.addEventListener("input", update);
+</script>
+</html>

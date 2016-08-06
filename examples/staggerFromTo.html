@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>StaggerFromTo example</title>
+    <script src="js/TweenMax.min.js"></script>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+      background: #000;
+    }
+
+    .balls {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .ball {
+      position: relative;
+      background: #fff;
+      display: inline-block;
+      margin: 10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+    }
+
+
+</style>
+<body>
+  <div class="balls">
+    <span class="ball"></span>
+    <span class="ball"></span>
+    <span class="ball"></span>
+    <span class="ball"></span>
+    <span class="ball"></span>
+  </div>
+</body>
+
+<script>
+    TweenMax.staggerFromTo();
+</script>
+</html>
