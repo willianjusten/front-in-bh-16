@@ -21,10 +21,14 @@
     }
 </style>
 <body>
-    <img class="svg" src="https://lyef.github.io/lyef-logo.svg" alt="" />
+    <img class="svg" src="img/bambam.png" alt="" />
 </body>
 
 <script>
-    TweenMax.to();
+    TweenMax.to('.svg', 2, {
+      x: 600,
+      opacity: .3,
+      rotation: 360
+    });
 </script>
 </html>

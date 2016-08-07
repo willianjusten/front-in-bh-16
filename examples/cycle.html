@@ -53,6 +53,11 @@
 </body>
 
 <script>
-    TweenMax.staggerFrom();
+    TweenMax.staggerFrom('.palestrantes li', 2, {
+      opacity: 0,
+      cycle: {
+        x: [30, -30]
+      }
+    }, .2);
 </script>
 </html>

@@ -45,6 +45,12 @@
 </body>
 
 <script>
-    TweenMax.staggerFromTo();
+    TweenMax.staggerFromTo('.ball', 2, {
+      scale: .2
+    }, {
+      scale: 1.2,
+      repeat: -1,
+      yoyo: true
+    }, .2);
 </script>
 </html>

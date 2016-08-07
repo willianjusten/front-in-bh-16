@@ -16,15 +16,19 @@
     }
 
     img {
-      width: 200px;
+      width: 600px;
       position: relative;
     }
 </style>
 <body>
-    <img class="svg" src="https://lyef.github.io/lyef-logo.svg" alt="" />
+    <img class="svg" src="img/bambam.png" alt="" />
 </body>
 
 <script>
-    TweenMax.from();
+    TweenMax.from('.svg', 2, {
+      scale: .1,
+      opacity: 0,
+      ease: Bounce.easeOut
+    });
 </script>
 </html>
